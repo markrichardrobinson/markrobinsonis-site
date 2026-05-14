@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f8f5;
+    color: #111;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+/* Header */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(248, 248, 245, 0.96);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.site-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.site-nav a:hover {
+    opacity: 0.5;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 0.4rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Home Page */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 2.5rem 8% 5rem 8%;
+    min-height: calc(100vh - 70px);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.2rem;
+    font-weight: 500;
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.8rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.intro {
+    max-width: 520px;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+}
+
+/* Books / About / Contact Pages */
+
+.book-page {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 4rem 8% 6rem 8%;
+    min-height: calc(100vh - 70px);
+}
+
+.book-image {
+    flex: 1;
+}
+
+.book-image img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    display: block;
+}
+
+.book-text {
+    flex: 1;
+    max-width: 540px;
+}
+
+.section-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+    opacity: 0.6;
+}
+
+.book-text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+}
+
+.book-intro {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.book-text p {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    margin: 2.5rem 0;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+blockquote span {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+.book-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    border: 1px solid #111;
+    text-decoration: none;
+    color: #111;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #111;
+    color: #f8f8f5;
+}
+
+/* Writing Landing Page */
+
+.writing-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 8% 6rem 8%;
+}
+
+.writing-intro {
+    max-width: 720px;
+    margin-bottom: 5rem;
+}
+
+.writing-intro h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.writing-summary {
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+.writing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.writing-item {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    max-width: 760px;
+}
+
+.writing-item h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.writing-item h2 a {
+    color: #111;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.writing-item h2 a:hover {
+    opacity: 0.5;
+}
+
+.writing-item p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    opacity: 0.85;
+}
+
+/* Article Page */
+
+.article-page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 4rem 6% 6rem 6%;
+}
+
+.article-header {
+    max-width: 700px;
+    margin-bottom: 4rem;
+}
+
+.article-kicker {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+}
+
+.article-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+}
+
+.article-intro {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    opacity: 0.85;
+}
+
+.article-body {
+    max-width: 620px;
+}
+
+.article-body p {
+    font-size: 1.08rem;
+    line-height: 2;
+    margin-bottom: 1.7rem;
+}
+
+.article-body h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 4rem 0 2rem 0;
+}
+
+.article-body blockquote {
+    margin: 3.5rem 0;
+    padding-left: 1.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 1.25rem;
+    line-height: 1.9;
+}
+
+.article-revelation-line {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1.7rem !important;
+    line-height: 1.8 !important;
+    margin: 4rem 0 !important;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.article-back-link {
+    margin-top: 4rem;
+}
+
+.article-back-link a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.article-back-link a:hover {
+    opacity: 0.6;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 0.9rem 8%;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .site-title {
+        padding-top: 0.35rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1.25rem;
+    }
+
+    body.menu-open .site-nav {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 3.5rem 8%;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 3.2rem;
+    }
+
+    .intro {
+        font-size: 1.05rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .book-page {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 3.5rem 8% 5rem 8%;
+    }
+
+    .book-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .book-intro {
+        font-size: 1.05rem;
+    }
+
+    .book-image {
+        width: 100%;
+    }
+
+    .writing-page {
+        padding: 3.5rem 8% 5rem 8%;
+    }
+
+    .writing-intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .writing-summary {
+        font-size: 1.05rem;
+    }
+
+    .writing-item h2 {
+        font-size: 1.7rem;
+    }
+
+    .article-page {
+        padding: 3.5rem 8% 5rem 8%;
+    }
+
+    .article-header h1 {
+        font-size: 3rem;
+    }
+
+    .article-intro {
+        font-size: 1.1rem;
+    }
+
+    .article-body p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+    }
+
+    .article-revelation-line {
+        font-size: 1.35rem !important;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .hero-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero {
+        padding-top: 3rem;
+    }
+
+    .book-text h1 {
+        font-size: 2.35rem;
+    }
+
+    .writing-intro h1 {
+        font-size: 2.3rem;
+    }
+
+    .writing-item h2 {
+        font-size: 1.45rem;
+    }
+
+    .article-header h1 {
+        font-size: 2.45rem;
+    }
+
+    .article-body blockquote {
+        font-size: 1.1rem;
+    }
+}
+
+.homepage-book-link {
+    margin-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.homepage-book-link a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.homepage-book-link a:hover {
+    opacity: 0.6;
+}
