@@ -254,6 +254,22 @@ blockquote span {
     opacity: 0.85;
 }
 
+.writing-item h2 {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.writing-item h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 72px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
 /* Article Page */
 
 .article-page {
@@ -491,3 +507,4 @@ blockquote span {
 .homepage-book-link a:hover {
     opacity: 0.6;
 }
+
