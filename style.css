@@ -354,6 +354,14 @@ blockquote span {
     opacity: 0.6;
 }
 
+.article-date {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 0.8rem;
+}
+
 /* Mobile */
 
 @media (max-width: 900px) {
