@@ -537,3 +537,19 @@ blockquote span {
     font-size: 0.8rem;
     opacity: 0.45;
 }
+
+.homepage-writing-link {
+    margin-top: 3rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+}
+
+.homepage-writing-link a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 0.1rem;
+}
+
+.homepage-writing-link a:hover {
+    border-color: rgba(0,0,0,0.6);
+}
