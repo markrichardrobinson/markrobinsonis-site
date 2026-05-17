@@ -501,69 +501,33 @@ blockquote span {
 }
 
 .homepage-book-link {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font-size: 1rem;
     opacity: 0.8;
 }
 
-.homepage-book-link a {
-    color: #111;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.homepage-book-link a:hover {
-    opacity: 0.6;
-}
-
-.site-footer {
-    margin-top: 3rem;
-    padding: 2rem 8%;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.site-footer {
-    margin-top: 3rem;
-    padding: 2rem 8%;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-copyright {
-    font-size: 0.8rem;
-    opacity: 0.45;
-}
-
 .homepage-writing-link {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     font-size: 0.95rem;
-    letter-spacing: 0.04em;
 }
 
-.homepage-writing-link a {
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    padding-bottom: 0.1rem;
-}
-
-.homepage-writing-link a:hover {
-    border-color: rgba(0,0,0,0.6);
+.homepage-links {
+    margin-top: 2rem;
 }
 
 .latest-reflection {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
     border-top: 1px solid rgba(0,0,0,0.08);
 }
 
+.latest-reflection .section-label {
+    margin-bottom: 0.5rem;
+}
+
 .latest-title {
-    margin-top: 0.75rem;
+    margin: 0;
     font-size: 1rem;
-    letter-spacing: 0.01em;
 }
 
 .latest-title a {
@@ -573,6 +537,9 @@ blockquote span {
     padding-bottom: 0.1rem;
 }
 
-.latest-title a:hover {
-    opacity: 0.7;
+.latest-description {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.75;
 }
