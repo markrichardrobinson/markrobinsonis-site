@@ -555,31 +555,24 @@ blockquote span {
 }
 
 .latest-reflection {
-    margin-top: 4rem;
-    padding-top: 2.5rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
     border-top: 1px solid rgba(0,0,0,0.08);
 }
 
-.latest-reflection h2 {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.05;
+.latest-title {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
 }
 
-.latest-reflection h2 a {
+.latest-title a {
     text-decoration: none;
     color: inherit;
-}
-
-.latest-reflection p {
-    max-width: 34rem;
-}
-
-.text-link {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
     border-bottom: 1px solid rgba(0,0,0,0.15);
-    padding-bottom: 0.15rem;
+    padding-bottom: 0.1rem;
+}
+
+.latest-title a:hover {
+    opacity: 0.7;
 }
