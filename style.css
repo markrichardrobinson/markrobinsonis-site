@@ -575,3 +575,13 @@ blockquote span {
     object-fit: cover;
     object-position: center;
 }
+
+@media (max-width: 700px) {
+    .article-banner {
+        margin-bottom: 2.5rem;
+    }
+
+    .article-banner img {
+        height: 220px;
+    }
+}
