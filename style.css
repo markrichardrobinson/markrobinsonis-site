@@ -591,3 +591,18 @@ blockquote span {
     }
 
 }
+
+.homepage-instagram {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+}
+
+.homepage-instagram a {
+    color: #6e5a8a;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.homepage-instagram a:hover {
+    opacity: 0.7;
+}
