@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Inter:wght@300;400;500&display=swap');
 
+:root {
+    --background: #f8f8f5;
+    --text: #111;
+    --muted: rgba(0, 0, 0, 0.65);
+    --line: rgba(0, 0, 0, 0.08);
+    --accent: #306988;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +15,8 @@
 }
 
 body {
-    background: #f8f8f5;
-    color: #111;
+    background: var(--background);
+    color: var(--text);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
 }
@@ -20,8 +28,8 @@ body {
     top: 0;
     z-index: 100;
     background: rgba(248, 248, 245, 0.96);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 1rem 8%;
+    border-bottom: 1px solid var(--line);
+    padding: 1.2rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,13 +52,13 @@ body {
 
 .site-nav a {
     text-decoration: none;
-    color: #111;
+    color: var(--text);
     font-size: 0.95rem;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .site-nav a:hover {
-    opacity: 0.5;
+    color: var(--accent);
 }
 
 .menu-toggle {
@@ -61,6 +69,36 @@ body {
     font-family: inherit;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+/* Shared Links */
+
+a {
+    color: inherit;
+}
+
+.text-link,
+.homepage-book-link a,
+.homepage-writing-link a,
+.homepage-instagram a,
+.article-back-link a,
+.book-text a,
+.writing-bridge a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(48, 105, 136, 0.35);
+    transition: opacity 0.25s ease, border-color 0.25s ease;
+}
+
+.text-link:hover,
+.homepage-book-link a:hover,
+.homepage-writing-link a:hover,
+.homepage-instagram a:hover,
+.article-back-link a:hover,
+.book-text a:hover,
+.writing-bridge a:hover {
+    opacity: 0.75;
+    border-color: var(--accent);
 }
 
 /* Home Page */
@@ -89,7 +127,7 @@ body {
 
 .subtitle {
     font-size: 1.1rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.6rem;
     opacity: 0.7;
 }
 
@@ -108,6 +146,73 @@ body {
     max-width: 520px;
     height: auto;
     display: block;
+}
+
+.homepage-book-link {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.homepage-launch-line {
+    margin-top: 1.8rem;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.homepage-launch-line span {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.homepage-writing-link {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.homepage-instagram {
+    margin-top: 1.1rem;
+    font-size: 0.95rem;
+}
+
+.homepage-links {
+    margin-top: 2rem;
+}
+
+.latest-reflection {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.latest-reflection .section-label {
+    margin-bottom: 0.5rem;
+}
+
+.latest-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.latest-title a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 0.1rem;
+}
+
+.latest-title a:hover {
+    color: var(--accent);
+}
+
+.latest-description {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.75;
 }
 
 /* Books / About / Contact Pages */
@@ -162,6 +267,41 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.book-accent-line {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+.book-feature-image {
+    margin: 2.5rem 0;
+}
+
+.book-feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.book-excerpt,
+.instagram-bridge,
+.writing-bridge,
+.contact-launch-note {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+}
+
+.instagram-bridge h2,
+.book-excerpt h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
 blockquote {
     margin: 2.5rem 0;
     padding-left: 1.5rem;
@@ -186,16 +326,17 @@ blockquote span {
 .button {
     display: inline-block;
     padding: 0.9rem 1.4rem;
-    border: 1px solid #111;
+    border: 1px solid var(--text);
     text-decoration: none;
-    color: #111;
+    color: var(--text);
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
 .button:hover {
-    background: #111;
-    color: #f8f8f5;
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--background);
 }
 
 /* Writing Landing Page */
@@ -220,8 +361,15 @@ blockquote span {
 }
 
 .writing-summary {
+    max-width: 680px;
     font-size: 1.2rem;
     line-height: 1.9;
+}
+
+.writing-bridge {
+    max-width: 680px;
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 .writing-list {
@@ -232,7 +380,7 @@ blockquote span {
 
 .writing-item {
     padding-bottom: 2.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--line);
     max-width: 760px;
 }
 
@@ -240,26 +388,6 @@ blockquote span {
     font-family: 'Cinzel', serif;
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.writing-item h2 a {
-    color: #111;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.writing-item h2 a:hover {
-    opacity: 0.5;
-}
-
-.writing-item p {
-    font-size: 1.05rem;
-    line-height: 1.9;
-    opacity: 0.85;
-}
-
-.writing-item h2 {
     position: relative;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
@@ -272,7 +400,23 @@ blockquote span {
     bottom: 0;
     width: 72px;
     height: 1px;
-    background: rgba(0, 0, 0, 0.12);
+    background: rgba(48, 105, 136, 0.35);
+}
+
+.writing-item h2 a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.writing-item h2 a:hover {
+    color: var(--accent);
+}
+
+.writing-item p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    opacity: 0.85;
 }
 
 /* Article Page */
@@ -281,6 +425,22 @@ blockquote span {
     max-width: 760px;
     margin: 0 auto;
     padding: 4rem 6% 6rem 6%;
+}
+
+.article-banner {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: -4rem;
+    margin-bottom: 5rem;
+}
+
+.article-banner img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .article-header {
@@ -293,6 +453,14 @@ blockquote span {
     line-height: 1.9;
     margin-bottom: 2.5rem;
     opacity: 0.8;
+}
+
+.article-date {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 0.8rem;
 }
 
 .article-header h1 {
@@ -314,7 +482,7 @@ blockquote span {
 }
 
 .article-body p {
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     line-height: 2;
     margin-bottom: 1.7rem;
 }
@@ -329,7 +497,7 @@ blockquote span {
 .article-body blockquote {
     margin: 3.5rem 0;
     padding-left: 1.5rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(48, 105, 136, 0.45);
     font-size: 1.25rem;
     line-height: 1.9;
 }
@@ -349,22 +517,22 @@ blockquote span {
     margin-top: 4rem;
 }
 
-.article-back-link a {
-    color: #111;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+/* Footer */
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 8%;
+    border-top: 1px solid var(--line);
 }
 
-.article-back-link a:hover {
-    opacity: 0.6;
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.article-date {
+.footer-copyright {
     font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     opacity: 0.45;
-    margin-bottom: 0.8rem;
 }
 
 /* Mobile */
@@ -456,6 +624,15 @@ blockquote span {
         padding: 3.5rem 8% 5rem 8%;
     }
 
+    .article-banner {
+        margin-top: -2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .article-banner img {
+        height: 220px;
+    }
+
     .article-header h1 {
         font-size: 3rem;
     }
@@ -503,106 +680,4 @@ blockquote span {
     .article-body blockquote {
         font-size: 1.1rem;
     }
-}
-
-.homepage-book-link {
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    opacity: 0.8;
-}
-
-.homepage-writing-link {
-    margin-top: 1.5rem;
-    font-size: 0.95rem;
-}
-
-.homepage-links {
-    margin-top: 2rem;
-}
-
-.latest-reflection {
-    margin-top: 1.75rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(0,0,0,0.08);
-}
-
-.latest-reflection .section-label {
-    margin-bottom: 0.5rem;
-}
-
-.latest-title {
-    font-size: 0.95rem;
-	font-weight: 500;
-	letter-spacing: 0.01em;
-	margin-top: 0.5rem;
-	margin-bottom: 0;
-}
-
-.latest-title a {
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-    padding-bottom: 0.1rem;
-}
-
-.latest-description {
-    margin-top: 0.6rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    opacity: 0.75;
-}
-
-.site-header {
-    padding: 1.2rem 8%;
-}
-
-.site-footer {
-    margin-top: 3rem;
-    padding: 2rem 8%;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-
-.article-banner {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-top: -4rem;
-    margin-bottom: 5rem;
-}
-
-.article-banner img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center;
-}
-
-@media (max-width: 700px) {
-
-    .article-banner {
-        margin-top: -2rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .article-banner img {
-        height: 220px;
-    }
-
-}
-
-.homepage-instagram {
-    margin-top: 1.2rem;
-    font-size: 1rem;
-}
-
-.homepage-instagram a {
-    color: #6e5a8a;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.homepage-instagram a:hover {
-    opacity: 0.7;
 }
