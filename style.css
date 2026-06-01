@@ -225,13 +225,27 @@ a {
     min-height: calc(100vh - 70px);
 }
 
+/* Dedicated Books Page Layout */
+
+.book-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 4rem 8% 6rem 8%;
+}
+
+.book-cover-sticky {
+    position: sticky;
+    top: 7rem;
+}
+
 .book-image {
     flex: 1;
 }
 
 .book-image img {
     width: 100%;
-    max-width: 520px;
+    max-width: 480px;
     height: auto;
     display: block;
 }
@@ -276,11 +290,14 @@ a {
 }
 
 .book-feature-image {
-    margin: 2.5rem 0;
+    margin: 3rem 0 0 0;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
 }
 
 .book-feature-image img {
     width: 100%;
+    max-width: 540px;
     height: auto;
     display: block;
 }
@@ -585,11 +602,17 @@ blockquote span {
         width: 100%;
     }
 
-    .book-page {
+    .book-page,
+    .book-layout {
         flex-direction: column;
         align-items: flex-start;
         gap: 3rem;
         padding: 3.5rem 8% 5rem 8%;
+        min-height: auto;
+    }
+
+    .book-cover-sticky {
+        position: static;
     }
 
     .book-text h1 {
@@ -602,6 +625,10 @@ blockquote span {
 
     .book-image {
         width: 100%;
+    }
+
+    .book-image img {
+        max-width: 100%;
     }
 
     .writing-page {
