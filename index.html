@@ -1,133 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mark Richard Robinson</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<meta name="description"
+    content="The website of Mark Richard Robinson: minister, writer, artist, public theologian, and author of A Measure of Breath.">
+<title>Mark Richard Robinson | Theology, Writing and Public Reflection</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header class="site-header">
-
-        <div class="site-title">
-            <a href="index.html">Mark Richard Robinson</a>
+<header class="site-header">
+<div class="site-title">
+    <a href="index.html">Mark Richard Robinson</a>
+</div>
+<button class="menu-toggle"
+    aria-label="Open menu"
+    aria-expanded="false"
+    onclick="
+        document.body.classList.toggle('menu-open');
+        this.setAttribute(
+            'aria-expanded',
+            document.body.classList.contains('menu-open')
+        );
+    ">
+    Menu
+</button>
+<nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="writing.html">Writing</a>
+    <a href="books.html">Books</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+</header>
+<main>
+<section class="home-hero">
+    <div class="home-hero-image">
+        <img src="images/home.jpg"
+            alt="Remington typewriter and handmade wooden cross belonging to Mark Richard Robinson">
+    </div>
+    <div class="home-hero-text">
+        <p class="home-identity">
+            Minister · Writer · Artist · Public theologian
+        </p>
+        <h1>
+            Mark<br>
+            Richard<br>
+            Robinson
+        </h1>
+        <p class="home-statement">
+            Theology, writing, and public reflection shaped by hope,
+            justice, and the presence of God within human struggle.
+        </p>
+        <div class="home-primary-links">
+            <a href="writing.html" class="button button-accent">
+                Read the Writing
+            </a>
+            <a href="books.html" class="button">
+                Explore the Books
+            </a>
+            <a href="about.html" class="home-text-link">
+                About Mark →
+            </a>
         </div>
-
-        <button class="menu-toggle"
-            aria-label="Open menu"
-            onclick="document.body.classList.toggle('menu-open')">
-            Menu
-        </button>
-
-        <nav class="site-nav">
-
-            <a href="index.html">Home</a>
-            <a href="writing.html">Writing</a>
-            <a href="books.html">Books</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-    </header>
-
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-image">
-
-                <img src="images/home-hero.jpg"
-                    alt="Figure study by Mark Robinson">
-
-            </div>
-
-            <div class="hero-text">
-
-                <h1>
-                    Mark<br>
-                    Richard<br>
-                    Robinson
-                </h1>
-
-                <p class="subtitle">
-                    Theology. Writing. Art. Public reflection.
-                </p>
-
-                <p class="intro">
-                    Reflections on faith, justice, suffering, hope, memory, and the presence of God within human struggle.
-                </p>
-
-                <p class="homepage-launch-line">
-                    <span>Now available:</span>
-                    <a href="books.html">
-                        <em>A Measure of Breath</em>
-                    </a>
-                </p>
-
-                <p class="homepage-book-link">
-                    A contemplative novel shaped by survival, memory, faith, and hope.
-                </p>
-
-                <div class="homepage-links">
-
-                    <p class="homepage-writing-link">
-                        <a href="writing.html">
-                            Ongoing essays, sermons, and reflections →
-                        </a>
-                    </p>
-
-                    <p class="homepage-instagram">
-                        <a href="https://instagram.com/markrobinsonis" target="_blank">
-                            @markrobinsonis →
-                        </a>
-                    </p>
-
-                    <div class="latest-reflection">
-
-                        <p class="section-label">
-                            Latest Reflection
-                        </p>
-
-                        <p class="latest-title">
-                            <a href="writing/love-older-than-death.html">
-                                <strong>Love Older Than Death</strong>
-                            </a>
-                        </p>
-
-                        <p class="latest-description">
-                            Fear, violence, resurrection, and the love of God beyond death.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-
-        <div class="footer-inner">
-
-            <p class="footer-copyright">
-                © 2026 Mark Richard Robinson
+    </div>
+</section>
+<section class="home-latest">
+    <div class="home-section-inner">
+        <div class="home-section-heading">
+            <p class="section-label">
+                Latest Reflection
             </p>
-
+            <p class="article-date">
+                February 2026
+            </p>
         </div>
-
-    </footer>
-
+        <div class="home-latest-content">
+            <h2>
+                <a href="writing/love-older-than-death.html">
+                    Love Older Than Death
+                </a>
+            </h2>
+            <p>
+                A reflection on fear-shaped theology, the cross as exposure,
+                resurrection hope, and the love of God that outlives violence.
+            </p>
+            <a href="writing/love-older-than-death.html"
+                class="home-text-link">
+                Read the reflection →
+            </a>
+        </div>
+    </div>
+</section>
+<section class="home-featured-book">
+    <div class="home-book-inner">
+        <div class="home-book-cover">
+            <img src="images/a-measure-of-breath-book.jpg"
+                alt="Cover of A Measure of Breath by Mark Richard Robinson">
+        </div>
+        <div class="home-book-content">
+            <p class="section-label">
+                Featured Book
+            </p>
+            <p class="home-book-status">
+                Now available
+            </p>
+            <h2>
+                A Measure of Breath
+            </h2>
+            <p class="home-book-summary">
+                A contemplative novel of survival, memory, faith, justice,
+                and the stories our bodies carry long after words have failed.
+            </p>
+            <div class="home-book-links">
+                <a href="books.html" class="button button-accent">
+                    Discover the Book
+                </a>
+                <a href="extract.html" class="button">
+                    Read an Extract
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="home-quotation">
+    <div class="home-quotation-inner">
+        <blockquote>
+            “Ahead, the great churches rise… Their walls have seen too much…
+            There was another time, too. A time when these same walls housed silence.”
+        </blockquote>
+        <p>
+            From <em>A Measure of Breath</em>
+        </p>
+    </div>
+</section>
+<section class="home-follow">
+    <div class="home-section-inner">
+        <p>
+            Essays, visual reflections, and the continuing
+            <em>What Breath Remembers</em> series can also be found on Instagram.
+        </p>
+        <a href="https://instagram.com/markrobinsonis"
+            class="home-text-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            @markrobinsonis →
+        </a>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+    <p class="footer-copyright">
+        © 2026 Mark Richard Robinson
+    </p>
+</div>
+</footer>
 </body>
-
 </html>
