@@ -1173,3 +1173,39 @@ blockquote span {
         text-align: center;
     }
 }
+
+/* Homepage theological statement */
+
+.home-statement {
+    width: 100%;
+    background: var(--background);
+    padding: 0;
+    overflow: hidden;
+}
+
+.home-statement img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-statement {
+    width: 100%;
+    padding: 2rem 0;
+    background: var(--background);
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+
+    .home-statement {
+        padding: 1.25rem 0;
+        overflow: hidden;
+    }
+
+    .home-statement img {
+        width: 150%;
+        max-width: none;
+        margin-left: -5%;
+    }
+
+}
