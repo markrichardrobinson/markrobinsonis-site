@@ -1174,3 +1174,14 @@ blockquote span {
     }
 }
 
+.home-quote {
+    max-width: 820px;
+    margin: 8rem auto;
+    padding: 0 2rem;
+    text-align: left;
+}
+
+.home-quote footer {
+    text-align: left;
+}
+
