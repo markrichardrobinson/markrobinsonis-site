@@ -289,71 +289,183 @@ gap: 1rem;
 margin-top: 2rem;
 }
 
-/* Homepage Quotation */
-
-/* Homepage quotation */
+/* ========================================
+   HOMEPAGE CLOSING SECTION
+   Guiding conviction and Instagram
+   ======================================== */
 
 .home-quotation {
-    padding: 6rem 8%;
+    padding: 7rem 8% 6rem;
+    background: var(--background);
 }
 
 .home-quotation-inner {
-    max-width: 1080px;
+    width: min(1180px, 100%);
     margin: 0 auto;
     text-align: left;
 }
 
+/* Keep only one heading in the HTML:
+   A Guiding Conviction */
+
 .home-quotation .section-label {
-    margin-bottom: 2rem;
+    margin: 0 0 2.75rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.52);
 }
 
+/* Main theological statement */
+
 .home-quotation blockquote {
-    max-width: 1000px;
+    max-width: 1080px;
     margin: 0;
-    padding-left: 2rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.18);
+    padding: 0 0 0 2rem;
+    border-left: 1px solid rgba(17, 17, 17, 0.18);
+
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.3rem, 3.4vw, 3.2rem);
+    font-size: clamp(2.4rem, 3.8vw, 3.65rem);
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.34;
     letter-spacing: -0.015em;
+    color: var(--text);
 }
 
 .home-quotation blockquote p {
-    margin: 0 0 2rem;
+    margin: 0 0 2.35rem;
 }
 
 .home-quotation blockquote p:last-child {
     margin-bottom: 0;
 }
 
-.home-quotation cite {
-    display: block;
-    margin-top: 2rem;
+/* Instagram invitation */
+
+.home-instagram {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: 3rem;
+
+    margin-top: 5rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid var(--line);
+}
+
+.home-instagram-copy {
+    max-width: 760px;
+}
+
+.home-instagram .section-label {
+    margin-bottom: 1rem;
+}
+
+.home-instagram-copy p:last-child {
+    margin: 0;
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.home-instagram-link {
+    display: inline-block;
+    padding-bottom: 0.2rem;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+
+    border-bottom: 1px solid rgba(48, 105, 136, 0.4);
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+.home-instagram-link:hover,
+.home-instagram-link:focus-visible {
     color: var(--accent);
+    border-color: var(--accent);
 }
 
-/* Homepage Instagram */
-
-.home-follow {
-padding: 4rem 8%;
+.home-instagram-link:focus-visible {
+    outline: 2px solid rgba(48, 105, 136, 0.35);
+    outline-offset: 5px;
 }
 
-.home-follow .home-section-inner {
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 3rem;
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .home-quotation {
+        padding: 5.5rem 8% 5rem;
+    }
+
+    .home-quotation blockquote {
+        max-width: 920px;
+        font-size: clamp(2.15rem, 5.2vw, 3rem);
+        line-height: 1.38;
+    }
+
+    .home-instagram {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .home-instagram-link {
+        justify-self: start;
+    }
 }
 
-.home-follow p {
-max-width: 680px;
-line-height: 1.8;
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .home-quotation {
+        padding: 4.25rem 8% 4rem;
+    }
+
+    .home-quotation .section-label {
+        margin-bottom: 2rem;
+        font-size: 0.76rem;
+        letter-spacing: 0.14em;
+    }
+
+    .home-quotation blockquote {
+        padding-left: 1.25rem;
+        font-size: clamp(1.75rem, 8vw, 2.35rem);
+        line-height: 1.42;
+        letter-spacing: -0.01em;
+    }
+
+    .home-quotation blockquote p {
+        margin-bottom: 1.8rem;
+    }
+
+    .home-instagram {
+        margin-top: 3.25rem;
+        padding-top: 1.75rem;
+    }
+
+    .home-instagram-copy p:last-child,
+    .home-instagram-link {
+        font-size: 0.95rem;
+    }
+}
+
+
+
 }
 
 /* Homepage Responsive Layout */
@@ -1222,53 +1334,6 @@ blockquote span {
 }
 
 
-.home-instagram-panel {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: end;
-    gap: 3rem;
-    margin-top: 5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--line);
-}
-
-.home-instagram-text {
-    max-width: 680px;
-}
-
-.home-instagram-label {
-    margin-bottom: 0.8rem;
-}
-
-.home-instagram-text p:last-child {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-
-.home-instagram-link {
-    display: inline-block;
-    padding-bottom: 0.2rem;
-    color: var(--text);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(48, 105, 136, 0.4);
-    font-size: 1rem;
-    white-space: nowrap;
-    transition:
-        color 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.home-instagram-link:hover,
-.home-instagram-link:focus-visible {
-    color: var(--accent);
-    border-color: var(--accent);
-}
-
-.home-instagram-link span {
-    color: var(--accent);
-}
-
 @media (max-width: 760px) {
 
     .home-closing {
@@ -1281,14 +1346,3 @@ blockquote span {
 
 
 
-    .home-instagram-panel {
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 1.5rem;
-        margin-top: 3.5rem;
-    }
-
-    .home-instagram-link {
-        justify-self: start;
-    }
-}
