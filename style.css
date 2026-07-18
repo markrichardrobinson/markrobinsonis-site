@@ -297,7 +297,7 @@ padding: 6rem 8%;
 
 .home-quotation-inner {
 max-width: 900px;
-text-align: center;
+text-align: left;
 }
 
 .home-quotation blockquote {
@@ -316,6 +316,10 @@ color: var(–accent);
 font-size: 0.82rem;
 letter-spacing: 0.1em;
 text-transform: uppercase;
+}
+
+.home-quote footer {
+    text-align: left;
 }
 
 /* Homepage Instagram */
