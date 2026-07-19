@@ -1345,4 +1345,81 @@ blockquote span {
     }
 
 
+/* ========================================
+   HOMEPAGE – TABLET
+   ======================================== */
 
+@media (max-width: 900px) {
+
+    .home-quotation {
+        padding: 5rem 8%;
+    }
+
+    .home-quotation blockquote {
+        max-width: 100%;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.38;
+        padding-left: 1.5rem;
+    }
+
+    .home-instagram {
+        display: block;
+        margin-top: 4rem;
+    }
+
+    .home-instagram-copy {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-instagram-link {
+        display: inline-block;
+    }
+
+}
+
+
+/* ========================================
+   HOMEPAGE – MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    .home-quotation {
+        padding: 4rem 6%;
+    }
+
+    .home-quotation .section-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-quotation blockquote {
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.45;
+        padding-left: 1rem;
+        border-left-width: 1px;
+    }
+
+    .home-quotation blockquote p {
+        margin-bottom: 1.5rem;
+    }
+
+    .home-instagram {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .home-instagram-copy p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .home-instagram-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.95rem;
+    }
+
+}
