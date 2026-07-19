@@ -1,3 +1,4 @@
+style-corrected
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Inter:wght@300;400;500&display=swap');
 
 :root {
@@ -14,11 +15,25 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    min-width: 320px;
+    overflow-x: hidden;
     background: var(--background);
     color: var(--text);
     font-family: 'Inter', sans-serif;
     line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
 }
 
 /* Header */
@@ -27,12 +42,12 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(248, 248, 245, 0.96);
-    border-bottom: 1px solid var(--line);
-    padding: 1.2rem 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1.2rem 8%;
+    border-bottom: 1px solid var(--line);
+    background: rgba(248, 248, 245, 0.96);
 }
 
 .site-title {
@@ -41,8 +56,8 @@ body {
 }
 
 .site-title a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 .site-nav {
@@ -51,262 +66,298 @@ body {
 }
 
 .site-nav a {
-    text-decoration: none;
     color: var(--text);
     font-size: 0.95rem;
+    text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a:focus-visible {
     color: var(--accent);
 }
 
 .menu-toggle {
     display: none;
-    background: none;
-    border: 1px solid rgba(0, 0, 0, 0.25);
     padding: 0.4rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    background: none;
     font-family: inherit;
     font-size: 0.9rem;
     cursor: pointer;
 }
 
-/* Shared Links */
-
-a {
-    color: inherit;
-}
+/* Shared links and buttons */
 
 .text-link,
+.home-text-link,
 .homepage-book-link a,
 .homepage-writing-link a,
 .homepage-instagram a,
 .article-back-link a,
 .book-text a,
-.writing-bridge a {
+.writing-bridge a,
+.instagram-link,
+.home-instagram-link {
     color: var(--accent);
     text-decoration: none;
     border-bottom: 1px solid rgba(48, 105, 136, 0.35);
-    transition: opacity 0.25s ease, border-color 0.25s ease;
+    transition: opacity 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .text-link:hover,
+.home-text-link:hover,
 .homepage-book-link a:hover,
 .homepage-writing-link a:hover,
 .homepage-instagram a:hover,
 .article-back-link a:hover,
 .book-text a:hover,
-.writing-bridge a:hover {
+.writing-bridge a:hover,
+.instagram-link:hover,
+.home-instagram-link:hover,
+.text-link:focus-visible,
+.home-text-link:focus-visible,
+.article-back-link a:focus-visible,
+.book-text a:focus-visible,
+.writing-bridge a:focus-visible,
+.instagram-link:focus-visible,
+.home-instagram-link:focus-visible {
     opacity: 0.75;
     border-color: var(--accent);
 }
 
-/* Home Page */
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    border: 1px solid var(--text);
+    color: var(--text);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--background);
+}
+
+.button-accent {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--background);
+}
+
+.button-accent:hover,
+.button-accent:focus-visible {
+    background: transparent;
+    color: var(--accent);
+}
+
+.section-label {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+/* Homepage hero */
 
 .home-hero {
-display: grid;
-grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
-align-items: center;
-gap: 5rem;
-min-height: calc(100vh - 75px);
-padding: 3.5rem 8% 5.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
+    align-items: center;
+    gap: 5rem;
+    min-height: calc(100vh - 75px);
+    padding: 3.5rem 8% 5.5rem;
 }
 
 .home-hero-image {
-min-width: 0;
+    min-width: 0;
 }
 
 .home-hero-image img {
-display: block;
-width: 100%;
-max-height: 680px;
-object-fit: cover;
-object-position: center;
+    display: block;
+    width: 100%;
+    max-height: 680px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .home-hero-text {
-max-width: 590px;
+    max-width: 590px;
 }
 
 .home-identity {
-margin-bottom: 1.4rem;
-color: var(–accent);
-font-size: 0.82rem;
-font-weight: 500;
-letter-spacing: 0.12em;
-line-height: 1.6;
-text-transform: uppercase;
+    margin-bottom: 1.4rem;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+    text-transform: uppercase;
 }
 
 .home-hero h1 {
-margin-bottom: 1.8rem;
-font-family: ‘Cinzel’, serif;
-font-size: clamp(3.5rem, 6vw, 5.4rem);
-font-weight: 500;
-letter-spacing: 0.015em;
-line-height: 1.02;
+    margin-bottom: 1.8rem;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3.5rem, 6vw, 5.4rem);
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    line-height: 1.02;
 }
 
 .home-statement {
-max-width: 550px;
-font-size: 1.2rem;
-line-height: 1.9;
+    max-width: 550px;
+    font-size: 1.2rem;
+    line-height: 1.9;
 }
 
 .home-primary-links {
-display: flex;
-align-items: center;
-flex-wrap: wrap;
-gap: 1rem;
-margin-top: 2.25rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.25rem;
 }
 
-.home-text-link {
-color: var(–accent);
-text-decoration: none;
-border-bottom: 1px solid rgba(48, 105, 136, 0.35);
-transition:
-opacity 0.25s ease,
-border-color 0.25s ease;
-}
-
-.home-text-link:hover {
-opacity: 0.72;
-border-color: var(–accent);
-}
-
-/* Shared Homepage Sections */
+/* Shared homepage sections */
 
 .home-latest,
 .home-featured-book,
-.home-quotation,
-.home-follow {
-border-top: 1px solid var(–line);
+.home-closing {
+    border-top: 1px solid var(--line);
 }
 
 .home-section-inner,
 .home-book-inner,
+.home-closing-inner,
 .home-quotation-inner {
-max-width: 1180px;
-margin: 0 auto;
+    width: min(1180px, 100%);
+    margin: 0 auto;
 }
 
+/* Latest reflection */
+
 .home-latest {
-padding: 5.5rem 8%;
+    padding: 5.5rem 8%;
 }
 
 .home-latest .home-section-inner {
-display: grid;
-grid-template-columns: minmax(170px, 0.35fr) minmax(0, 1fr);
-gap: 5rem;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.35fr) minmax(0, 1fr);
+    gap: 5rem;
 }
 
 .home-section-heading .section-label {
-margin-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.article-date {
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.45;
 }
 
 .home-latest-content {
-max-width: 720px;
+    max-width: 720px;
 }
 
 .home-latest-content h2 {
-margin-bottom: 1.5rem;
-font-family: ‘Cinzel’, serif;
-font-size: clamp(2.5rem, 5vw, 4.25rem);
-font-weight: 500;
-line-height: 1.12;
+    margin-bottom: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: 500;
+    line-height: 1.12;
 }
 
 .home-latest-content h2 a {
-color: var(–text);
-text-decoration: none;
-transition: color 0.25s ease;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
-.home-latest-content h2 a:hover {
-color: var(–accent);
+.home-latest-content h2 a:hover,
+.home-latest-content h2 a:focus-visible {
+    color: var(--accent);
 }
 
 .home-latest-content p {
-max-width: 650px;
-margin-bottom: 1.5rem;
-font-size: 1.1rem;
-line-height: 1.9;
+    max-width: 650px;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.9;
 }
 
-/* Featured Book */
+/* Featured book */
 
 .home-featured-book {
-padding: 6rem 8%;
-background: rgba(48, 105, 136, 0.025);
+    padding: 6rem 8%;
+    background: rgba(48, 105, 136, 0.025);
 }
 
 .home-book-inner {
-display: grid;
-grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
-align-items: center;
-gap: 5rem;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 5rem;
 }
 
 .home-book-cover img {
-display: block;
-width: 100%;
-max-width: 380px;
-height: auto;
-margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .home-book-content {
-max-width: 620px;
+    max-width: 620px;
 }
 
 .home-book-status {
-margin-bottom: 1rem;
-color: var(–accent);
-font-size: 0.82rem;
-font-weight: 500;
-letter-spacing: 0.12em;
-text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .home-book-content h2 {
-margin-bottom: 1.5rem;
-font-family: ‘Cinzel’, serif;
-font-size: clamp(2.5rem, 5vw, 4rem);
-font-weight: 500;
-line-height: 1.15;
+    margin-bottom: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.15;
 }
 
 .home-book-summary {
-font-size: 1.12rem;
-line-height: 1.9;
+    font-size: 1.12rem;
+    line-height: 1.9;
 }
 
 .home-book-links {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-/* ========================================
-   HOMEPAGE CLOSING SECTION
-   Guiding conviction and Instagram
-   ======================================== */
+/* Homepage closing section */
 
-.home-quotation {
+.home-closing {
     padding: 7rem 8% 6rem;
     background: var(--background);
 }
 
-.home-quotation-inner {
-    width: min(1180px, 100%);
-    margin: 0 auto;
-    text-align: left;
+.home-quotation {
+    padding: 0;
 }
-
-/* Keep only one heading in the HTML:
-   A Guiding Conviction */
 
 .home-quotation .section-label {
     margin: 0 0 2.75rem;
@@ -317,22 +368,20 @@ margin-top: 2rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: rgba(17, 17, 17, 0.52);
+    opacity: 1;
 }
-
-/* Main theological statement */
 
 .home-quotation blockquote {
     max-width: 1080px;
     margin: 0;
     padding: 0 0 0 2rem;
     border-left: 1px solid rgba(17, 17, 17, 0.18);
-
+    color: var(--text);
     font-family: 'Cinzel', serif;
     font-size: clamp(2.4rem, 3.8vw, 3.65rem);
     font-weight: 400;
-    line-height: 1.34;
     letter-spacing: -0.015em;
-    color: var(--text);
+    line-height: 1.34;
 }
 
 .home-quotation blockquote p {
@@ -343,216 +392,54 @@ margin-top: 2rem;
     margin-bottom: 0;
 }
 
-/* Instagram invitation */
+/* Supports the class names currently used in index.html */
 
-.home-instagram {
+.instagram-section {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: end;
     gap: 3rem;
-
     margin-top: 5rem;
     padding-top: 2.25rem;
     border-top: 1px solid var(--line);
 }
 
-.home-instagram-copy {
+.instagram-section .section-label {
+    grid-column: 1 / -1;
+    margin-bottom: -1.5rem;
+}
+
+.instagram-text {
     max-width: 760px;
-}
-
-.home-instagram .section-label {
-    margin-bottom: 1rem;
-}
-
-.home-instagram-copy p:last-child {
     margin: 0;
-    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--text);
 }
 
-.home-instagram-link {
+.instagram-link {
     display: inline-block;
+    justify-self: end;
     padding-bottom: 0.2rem;
-
-    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
     font-size: 1rem;
     line-height: 1.5;
-    color: var(--text);
-    text-decoration: none;
-    white-space: nowrap;
-
-    border-bottom: 1px solid rgba(48, 105, 136, 0.4);
-
-    transition:
-        color 0.25s ease,
-        border-color 0.25s ease,
-        opacity 0.25s ease;
 }
 
-.home-instagram-link:hover,
-.home-instagram-link:focus-visible {
-    color: var(--accent);
-    border-color: var(--accent);
-}
-
-.home-instagram-link:focus-visible {
-    outline: 2px solid rgba(48, 105, 136, 0.35);
-    outline-offset: 5px;
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
-
-    .home-quotation {
-        padding: 5.5rem 8% 5rem;
-    }
-
-    .home-quotation blockquote {
-        max-width: 920px;
-        font-size: clamp(2.15rem, 5.2vw, 3rem);
-        line-height: 1.38;
-    }
-
-    .home-instagram {
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 1.5rem;
-        margin-top: 4rem;
-    }
-
-    .home-instagram-link {
-        justify-self: start;
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .home-quotation {
-        padding: 4.25rem 8% 4rem;
-    }
-
-    .home-quotation .section-label {
-        margin-bottom: 2rem;
-        font-size: 0.76rem;
-        letter-spacing: 0.14em;
-    }
-
-    .home-quotation blockquote {
-        padding-left: 1.25rem;
-        font-size: clamp(1.75rem, 8vw, 2.35rem);
-        line-height: 1.42;
-        letter-spacing: -0.01em;
-    }
-
-    .home-quotation blockquote p {
-        margin-bottom: 1.8rem;
-    }
-
-    .home-instagram {
-        margin-top: 3.25rem;
-        padding-top: 1.75rem;
-    }
-
-    .home-instagram-copy p:last-child,
-    .home-instagram-link {
-        font-size: 0.95rem;
-    }
-}
-
-
-
-}
-
-/* Homepage Responsive Layout */
-
-@media (max-width: 900px) {
-
-.home-hero {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-    min-height: auto;
-    padding: 3.5rem 8% 5rem;
-}
-.home-hero-image img {
-    max-height: 560px;
-}
-.home-hero-text {
-    max-width: 700px;
-}
-.home-latest .home-section-inner {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-.home-book-inner {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-}
-.home-book-cover img {
-    max-width: 340px;
-    margin-left: 0;
-}
-.home-follow .home-section-inner {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-}
-
-@media (max-width: 520px) {
-
-.home-hero {
-    padding-top: 3rem;
-}
-.home-hero-image img {
-    max-height: 430px;
-}
-.home-primary-links,
-.home-book-links {
-    align-items: stretch;
-    flex-direction: column;
-}
-.home-primary-links .button,
-.home-book-links .button {
-    width: 100%;
-    text-align: center;
-}
-.home-primary-links .home-text-link {
-    align-self: flex-start;
-    margin-top: 0.5rem;
-}
-.home-latest,
-.home-featured-book,
-.home-quotation {
-    padding: 4.5rem 8%;
-}
-.home-follow {
-    padding: 3.5rem 8%;
-}
-
-}
-/* Books / About / Contact Pages */
+/* Books / About / Contact pages */
 
 .book-page {
     display: flex;
     align-items: center;
     gap: 5rem;
-    padding: 4rem 8% 6rem 8%;
     min-height: calc(100vh - 70px);
+    padding: 4rem 8% 6rem;
 }
-
-/* Dedicated Books Page Layout */
 
 .book-layout {
     display: flex;
     align-items: flex-start;
     gap: 4rem;
-    padding: 4rem 8% 6rem 8%;
+    padding: 4rem 8% 6rem;
 }
 
 .book-cover-sticky {
@@ -565,10 +452,10 @@ margin-top: 2rem;
 }
 
 .book-image img {
+    display: block;
     width: 100%;
     max-width: 480px;
     height: auto;
-    display: block;
 }
 
 .book-text {
@@ -576,26 +463,18 @@ margin-top: 2rem;
     max-width: 540px;
 }
 
-.section-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 1.5rem;
-    opacity: 0.6;
-}
-
 .book-text h1 {
+    margin-bottom: 2rem;
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 1.15;
-    margin-bottom: 2rem;
 }
 
 .book-intro {
+    margin-bottom: 1.5rem;
     font-size: 1.2rem;
     line-height: 1.9;
-    margin-bottom: 1.5rem;
 }
 
 .book-text p {
@@ -603,11 +482,11 @@ margin-top: 2rem;
 }
 
 .book-accent-line {
+    margin-bottom: 1.2rem;
     color: var(--accent);
     font-size: 0.9rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 1.2rem;
 }
 
 .book-excerpt,
@@ -621,10 +500,10 @@ margin-top: 2rem;
 
 .instagram-bridge h2,
 .book-excerpt h2 {
+    margin-bottom: 1rem;
     font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     font-weight: 500;
-    margin-bottom: 1rem;
 }
 
 blockquote {
@@ -644,32 +523,29 @@ blockquote span {
 
 .book-links {
     display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.button {
-    display: inline-block;
-    padding: 0.9rem 1.4rem;
-    border: 1px solid var(--text);
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
+.book-feature-image {
+    margin: 3rem 0 0;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
 }
 
-.button:hover {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: var(--background);
+.book-feature-image img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
 }
 
-/* Writing Landing Page */
+/* Writing landing page */
 
 .writing-page {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 4rem 8% 6rem 8%;
+    padding: 4rem 8% 6rem;
 }
 
 .writing-intro {
@@ -678,11 +554,11 @@ blockquote span {
 }
 
 .writing-intro h1 {
+    margin-bottom: 2rem;
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: 2rem;
 }
 
 .writing-summary {
@@ -704,25 +580,25 @@ blockquote span {
 }
 
 .writing-item {
+    max-width: 760px;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid var(--line);
-    max-width: 760px;
 }
 
 .writing-item h2 {
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     font-family: 'Cinzel', serif;
     font-size: 2rem;
     font-weight: 500;
-    position: relative;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
 }
 
 .writing-item h2::after {
-    content: "";
+    content: '';
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 72px;
     height: 1px;
     background: rgba(48, 105, 136, 0.35);
@@ -734,7 +610,8 @@ blockquote span {
     transition: color 0.3s ease;
 }
 
-.writing-item h2 a:hover {
+.writing-item h2 a:hover,
+.writing-item h2 a:focus-visible {
     color: var(--accent);
 }
 
@@ -744,20 +621,20 @@ blockquote span {
     opacity: 0.85;
 }
 
-/* Article Page */
+/* Article page */
 
 .article-page {
     max-width: 760px;
     margin: 0 auto;
-    padding: 4rem 6% 6rem 6%;
+    padding: 4rem 6% 6rem;
 }
 
 .article-banner {
     width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
     margin-top: -4rem;
+    margin-right: calc(50% - 50vw);
     margin-bottom: 5rem;
+    margin-left: calc(50% - 50vw);
 }
 
 .article-banner img {
@@ -774,26 +651,18 @@ blockquote span {
 }
 
 .article-kicker {
+    margin-bottom: 2.5rem;
     font-size: 1.1rem;
     line-height: 1.9;
-    margin-bottom: 2.5rem;
     opacity: 0.8;
 }
 
-.article-date {
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    opacity: 0.45;
-    margin-bottom: 0.8rem;
-}
-
 .article-header h1 {
+    margin-bottom: 2rem;
     font-family: 'Cinzel', serif;
     font-size: 3.2rem;
     font-weight: 500;
     line-height: 1.15;
-    margin-bottom: 2rem;
 }
 
 .article-intro {
@@ -807,16 +676,16 @@ blockquote span {
 }
 
 .article-body p {
+    margin-bottom: 1.7rem;
     font-size: 1.05rem;
     line-height: 2;
-    margin-bottom: 1.7rem;
 }
 
 .article-body h2 {
+    margin: 4rem 0 2rem;
     font-family: 'Cinzel', serif;
     font-size: 2rem;
     font-weight: 500;
-    margin: 4rem 0 2rem 0;
 }
 
 .article-body blockquote {
@@ -828,13 +697,13 @@ blockquote span {
 }
 
 .article-revelation-line {
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    font-size: 1.7rem !important;
-    line-height: 1.8 !important;
     margin: 4rem 0 !important;
-    letter-spacing: 0.02em;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.7rem !important;
     font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.8 !important;
+    text-align: center;
     text-transform: none;
 }
 
@@ -842,210 +711,7 @@ blockquote span {
     margin-top: 4rem;
 }
 
-/* Footer */
-
-.site-footer {
-    margin-top: 3rem;
-    padding: 2rem 8%;
-    border-top: 1px solid var(--line);
-}
-
-.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-copyright {
-    font-size: 0.8rem;
-    opacity: 0.45;
-}
-
-/* Tablet / Mobile */
-
-@media (max-width: 900px) {
-
-    .site-header {
-        padding: 0.9rem 8%;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .site-title {
-        padding-top: 0.35rem;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .site-nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 1rem;
-        padding-top: 1.25rem;
-    }
-
-    body.menu-open .site-nav {
-        display: flex;
-    }
-
-    .hero {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3rem;
-        padding: 3.5rem 8%;
-        min-height: auto;
-    }
-
-    .hero-text h1 {
-        font-size: 3.2rem;
-    }
-
-    .intro {
-        font-size: 1.05rem;
-    }
-
-    .hero-image {
-        width: 100%;
-    }
-
-    .book-page {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3rem;
-        padding: 3.5rem 8% 5rem 8%;
-        min-height: auto;
-    }
-
-    .book-text h1 {
-        font-size: 2.75rem;
-    }
-
-    .book-intro {
-        font-size: 1.05rem;
-    }
-
-    .book-image {
-        width: 100%;
-    }
-
-    .writing-page {
-        padding: 3.5rem 8% 5rem 8%;
-    }
-
-    .writing-intro h1 {
-        font-size: 2.75rem;
-    }
-
-    .writing-summary {
-        font-size: 1.05rem;
-    }
-
-    .writing-item h2 {
-        font-size: 1.7rem;
-    }
-
-    .article-page {
-        padding: 3.5rem 8% 5rem 8%;
-    }
-
-    .article-banner {
-        margin-top: -2rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .article-banner img {
-        height: 220px;
-    }
-
-    .article-header h1 {
-        font-size: 3rem;
-    }
-
-    .article-intro {
-        font-size: 1.1rem;
-    }
-
-    .article-body p {
-        font-size: 1.05rem;
-        line-height: 1.9;
-    }
-
-    .article-revelation-line {
-        font-size: 1.35rem !important;
-    }
-}
-
-/* Books page stacks later than the rest of the site */
-
-@media (max-width: 760px) {
-
-    .book-layout {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3rem;
-        padding: 3.5rem 8% 5rem 8%;
-    }
-
-    .book-cover-sticky {
-        position: static;
-    }
-
-    .book-layout .book-image {
-        width: 100%;
-    }
-
-    .book-layout .book-image img {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 520px) {
-
-    .hero-text h1 {
-        font-size: 2.75rem;
-    }
-
-    .hero {
-        padding-top: 3rem;
-    }
-
-    .book-text h1 {
-        font-size: 2.35rem;
-    }
-
-    .writing-intro h1 {
-        font-size: 2.3rem;
-    }
-
-    .writing-item h2 {
-        font-size: 1.45rem;
-    }
-
-    .article-header h1 {
-        font-size: 2.45rem;
-    }
-
-    .article-body blockquote {
-        font-size: 1.1rem;
-    }
-}
-
-.book-feature-image {
-    margin: 3rem 0 0 0;
-    padding-top: 2.5rem;
-    border-top: 1px solid var(--line);
-}
-
-.book-feature-image img {
-    width: 100%;
-    max-width: 520px;
-    height: auto;
-    display: block;
-}
-
-/* Giveaway Page */
+/* Giveaway page */
 
 .giveaway-hero {
     display: grid;
@@ -1121,17 +787,6 @@ blockquote span {
     margin-top: 2rem;
 }
 
-.button-accent {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: var(--background);
-}
-
-.button-accent:hover {
-    background: transparent;
-    color: var(--accent);
-}
-
 .giveaway-section {
     padding: 5rem 8%;
     border-top: 1px solid var(--line);
@@ -1167,8 +822,8 @@ blockquote span {
 }
 
 .giveaway-steps {
-    margin: 2rem 0 2rem 1.25rem;
     max-width: 680px;
+    margin: 2rem 0 2rem 1.25rem;
 }
 
 .giveaway-steps li {
@@ -1210,12 +865,11 @@ blockquote span {
     padding: 1.5rem;
     border: 1px solid var(--line);
     text-decoration: none;
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.giveaway-resource:hover {
+.giveaway-resource:hover,
+.giveaway-resource:focus-visible {
     border-color: var(--accent);
     transform: translateY(-2px);
 }
@@ -1260,7 +914,171 @@ blockquote span {
     opacity: 0.7;
 }
 
+/* Footer */
+
+.site-footer {
+    margin-top: 3rem;
+    padding: 2rem 8%;
+    border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    opacity: 0.45;
+}
+
+/* Tablet */
+
 @media (max-width: 900px) {
+    .site-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0.9rem 8%;
+    }
+
+    .site-title {
+        padding-top: 0.35rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1.25rem;
+    }
+
+    body.menu-open .site-nav {
+        display: flex;
+    }
+
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        min-height: auto;
+        padding: 3.5rem 8% 5rem;
+    }
+
+    .home-hero-image img {
+        max-height: 560px;
+    }
+
+    .home-hero-text {
+        max-width: 700px;
+    }
+
+    .home-latest .home-section-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .home-book-inner {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    .home-book-cover img {
+        max-width: 340px;
+        margin-left: 0;
+    }
+
+    .home-closing {
+        padding: 5rem 8%;
+    }
+
+    .home-quotation blockquote {
+        max-width: 100%;
+        padding-left: 1.5rem;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        line-height: 1.38;
+    }
+
+    .instagram-section {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .instagram-section .section-label {
+        grid-column: auto;
+        margin-bottom: -0.5rem;
+    }
+
+    .instagram-link {
+        justify-self: start;
+    }
+
+    .book-page {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        min-height: auto;
+        padding: 3.5rem 8% 5rem;
+    }
+
+    .book-text h1 {
+        font-size: 2.75rem;
+    }
+
+    .book-intro {
+        font-size: 1.05rem;
+    }
+
+    .book-image {
+        width: 100%;
+    }
+
+    .writing-page {
+        padding: 3.5rem 8% 5rem;
+    }
+
+    .writing-intro h1 {
+        font-size: 2.75rem;
+    }
+
+    .writing-summary {
+        font-size: 1.05rem;
+    }
+
+    .writing-item h2 {
+        font-size: 1.7rem;
+    }
+
+    .article-page {
+        padding: 3.5rem 8% 5rem;
+    }
+
+    .article-banner {
+        margin-top: -2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .article-header h1 {
+        font-size: 3rem;
+    }
+
+    .article-intro {
+        font-size: 1.1rem;
+    }
+
+    .article-body p {
+        font-size: 1.05rem;
+        line-height: 1.9;
+    }
+
+    .article-revelation-line {
+        font-size: 1.35rem !important;
+    }
 
     .giveaway-hero {
         grid-template-columns: 1fr;
@@ -1285,7 +1103,130 @@ blockquote span {
     }
 }
 
+/* Books page stacks later than the rest of the site */
+
+@media (max-width: 760px) {
+    .book-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        padding: 3.5rem 8% 5rem;
+    }
+
+    .book-cover-sticky {
+        position: static;
+    }
+
+    .book-layout .book-image {
+        width: 100%;
+    }
+
+    .book-layout .book-image img {
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .home-closing {
+        padding: 4rem 6%;
+    }
+
+    .home-quotation .section-label {
+        margin-bottom: 1.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+    }
+
+    .home-quotation blockquote {
+        padding-left: 1rem;
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.45;
+    }
+
+    .home-quotation blockquote p {
+        margin-bottom: 1.5rem;
+    }
+
+    .instagram-section {
+        margin-top: 3rem;
+        padding-top: 2rem;
+    }
+
+    .instagram-text,
+    .instagram-link {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 520px) {
+    .home-hero {
+        gap: 2.75rem;
+        padding-top: 3rem;
+    }
+
+    .home-hero-image img {
+        max-height: 430px;
+    }
+
+    .home-hero h1 {
+        font-size: clamp(2.8rem, 15vw, 3.7rem);
+    }
+
+    .home-statement {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .home-primary-links,
+    .home-book-links,
+    .giveaway-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home-primary-links .button,
+    .home-book-links .button,
+    .giveaway-actions .button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home-primary-links .home-text-link {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    .home-latest,
+    .home-featured-book {
+        padding: 4.5rem 8%;
+    }
+
+    .home-latest-content h2,
+    .home-book-content h2 {
+        font-size: clamp(2.15rem, 11vw, 3rem);
+    }
+
+    .book-text h1 {
+        font-size: 2.35rem;
+    }
+
+    .writing-intro h1 {
+        font-size: 2.3rem;
+    }
+
+    .writing-item h2 {
+        font-size: 1.45rem;
+    }
+
+    .article-header h1 {
+        font-size: 2.45rem;
+    }
+
+    .article-body blockquote {
+        font-size: 1.1rem;
+    }
 
     .giveaway-hero-image img {
         height: 320px;
@@ -1294,132 +1235,4 @@ blockquote span {
     .giveaway-section {
         padding: 4rem 8%;
     }
-
-    .giveaway-actions {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .giveaway-actions .button {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-/* Homepage closing quotation and Instagram section */
-
-.home-closing {
-    padding: 7rem 8% 6rem;
-    background: #f8f8f5;
-    border-top: 1px solid var(--line);
-}
-
-.home-closing-inner {
-    width: min(1180px, 100%);
-    margin: 0 auto;
-}
-
-.home-closing-label,
-.home-instagram-label {
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(17, 17, 17, 0.55);
-}
-
-.home-closing-label {
-    margin-bottom: 2rem;
-}
-
-
-@media (max-width: 760px) {
-
-    .home-closing {
-        padding: 4.5rem 8% 4rem;
-    }
-
-    .home-closing-label {
-        margin-bottom: 1.5rem;
-    }
-
-
-/* ========================================
-   HOMEPAGE – TABLET
-   ======================================== */
-
-@media (max-width: 900px) {
-
-    .home-quotation {
-        padding: 5rem 8%;
-    }
-
-    .home-quotation blockquote {
-        max-width: 100%;
-        font-size: clamp(2rem, 5vw, 2.75rem);
-        line-height: 1.38;
-        padding-left: 1.5rem;
-    }
-
-    .home-instagram {
-        display: block;
-        margin-top: 4rem;
-    }
-
-    .home-instagram-copy {
-        max-width: 100%;
-        margin-bottom: 1.5rem;
-    }
-
-    .home-instagram-link {
-        display: inline-block;
-    }
-
-}
-
-
-/* ========================================
-   HOMEPAGE – MOBILE
-   ======================================== */
-
-@media (max-width: 600px) {
-
-    .home-quotation {
-        padding: 4rem 6%;
-    }
-
-    .home-quotation .section-label {
-        font-size: 0.75rem;
-        letter-spacing: 0.14em;
-        margin-bottom: 1.5rem;
-    }
-
-    .home-quotation blockquote {
-        font-size: clamp(1.55rem, 7vw, 2rem);
-        line-height: 1.45;
-        padding-left: 1rem;
-        border-left-width: 1px;
-    }
-
-    .home-quotation blockquote p {
-        margin-bottom: 1.5rem;
-    }
-
-    .home-instagram {
-        margin-top: 3rem;
-        padding-top: 2rem;
-    }
-
-    .home-instagram-copy p {
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
-
-    .home-instagram-link {
-        display: inline-block;
-        margin-top: 1rem;
-        font-size: 0.95rem;
-    }
-
 }
