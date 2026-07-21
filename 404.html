@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex">
+
+    <title>Page Not Found | Mark Richard Robinson</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="site-title">
+        <a href="index.html">Mark Richard Robinson</a>
+    </div>
+
+    <button class="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        onclick="
+            document.body.classList.toggle('menu-open');
+            this.setAttribute(
+                'aria-expanded',
+                document.body.classList.contains('menu-open')
+            );
+        ">
+        Menu
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="writing.html">Writing</a>
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="error-page">
+
+        <p class="section-label">
+            Error 404
+        </p>
+
+        <h1>
+            This page could not be found.
+        </h1>
+
+        <p class="error-intro">
+            The address may have changed, or the page may no longer be here.
+            You are warmly invited to return to the homepage or continue exploring
+            the writing and books on this site.
+        </p>
+
+        <div class="error-links">
+
+            <a href="index.html" class="button button-accent">
+                Return Home
+            </a>
+
+            <a href="writing.html" class="button">
+                Read the Writing
+            </a>
+
+            <a href="books.html" class="home-text-link">
+                Explore the Books →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <p class="footer-copyright">
+            © 2026 Mark Richard Robinson
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
