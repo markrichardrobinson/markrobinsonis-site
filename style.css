@@ -1306,3 +1306,8 @@ blockquote span {
         margin-top: 0.5rem;
     }
 }
+
+.journey-closing {
+    margin-top: 2rem;
+    font-weight: 600;
+}
