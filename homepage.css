@@ -260,10 +260,11 @@
 /* Book photograph */
 
 .homepage .pathway-books img {
-    object-fit: contain;
-    object-position: center;
 
-    background: #3e3d3a;
+    object-fit: cover;
+
+    object-position: center 45%;
+
 }
 
 
