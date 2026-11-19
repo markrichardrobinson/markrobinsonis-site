@@ -1,0 +1,656 @@
+/* =========================================
+   MARKROBINSONIS.COM
+   WRITING LANDING PAGE
+   ========================================= */
+
+/*
+   This stylesheet controls the Writing
+   landing page only.
+
+   The original navigation, footer and
+   individual article styles remain
+   controlled by style.css.
+*/
+
+
+/* =========================================
+   VARIABLES
+   ========================================= */
+
+.writing-landing {
+    --journal-background: #f8f8f5;
+    --journal-white: #ffffff;
+    --journal-text: #111111;
+    --journal-muted: #666666;
+    --journal-accent: #306988;
+    --journal-line: #d8d8d3;
+
+    --journal-gutter: clamp(1.5rem, 8vw, 8rem);
+
+    --journal-heading:
+        'Cinzel', Georgia, serif;
+}
+
+
+/* =========================================
+   INTRODUCTION
+   ========================================= */
+
+.writing-landing .journal-intro {
+
+    background: var(--journal-background);
+
+    padding:
+        clamp(2.75rem, 5vw, 5rem)
+        var(--journal-gutter)
+        clamp(2.75rem, 5vw, 4.5rem);
+
+}
+
+.writing-landing .journal-intro-inner {
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+
+/* Section labels */
+
+.writing-landing .journal-label {
+
+    margin: 0 0 1.5rem;
+
+    color: var(--journal-muted);
+
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    letter-spacing: 0.13em;
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Main page heading */
+
+.writing-landing .journal-intro h1 {
+
+    max-width: 1050px;
+
+    margin: 0 0 1.5rem;
+
+    font-family: var(--journal-heading);
+    font-size: clamp(2.2rem, 4.4vw, 4.6rem);
+    font-weight: 400;
+
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+
+    color: var(--journal-text);
+
+}
+
+
+/* Introductory description */
+
+.writing-landing .journal-summary {
+
+    max-width: 780px;
+
+    margin: 0;
+
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.8;
+
+    color: var(--journal-text);
+
+}
+
+
+/* =========================================
+   PANORAMIC PHOTOGRAPH
+   ========================================= */
+
+.writing-landing .journal-banner {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: clamp(140px, 19vw, 320px);
+
+    overflow: hidden;
+
+    background: #45423e;
+
+}
+
+.writing-landing .journal-banner img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+/* =========================================
+   LATEST ARTICLE
+   ========================================= */
+
+.writing-landing .journal-featured {
+
+    padding:
+        clamp(3rem, 5.5vw, 5.5rem)
+        var(--journal-gutter);
+
+    background: var(--journal-white);
+
+}
+
+.writing-landing .journal-featured-inner {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: end;
+
+    gap: clamp(2rem, 7vw, 7rem);
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+
+/* Latest article date */
+
+.writing-landing .journal-date {
+
+    margin: 0 0 1rem;
+
+    color: var(--journal-accent);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+}
+
+
+/* Latest article title */
+
+.writing-landing .journal-featured h2 {
+
+    margin: 0;
+
+    font-family: var(--journal-heading);
+    font-size: clamp(2rem, 3.8vw, 3.8rem);
+    font-weight: 400;
+
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+
+}
+
+.writing-landing .journal-featured h2 a {
+
+    color: var(--journal-text);
+
+    text-decoration: none;
+    border: none;
+
+    transition: color 0.25s ease;
+
+}
+
+.writing-landing .journal-featured h2 a:hover {
+
+    color: var(--journal-accent);
+
+}
+
+
+/* Latest article description */
+
+.writing-landing .journal-featured-description p {
+
+    margin: 0 0 1.5rem;
+
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.85;
+
+}
+
+
+/* Read article link */
+
+.writing-landing .journal-read-link {
+
+    display: inline-block;
+
+    padding-bottom: 0.25rem;
+
+    color: var(--journal-accent);
+
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    border-bottom: 1px solid
+        var(--journal-accent);
+
+}
+
+
+/* =========================================
+   WRITING ARCHIVE
+   ========================================= */
+
+.writing-landing .journal-archive {
+
+    padding:
+        clamp(3rem, 5vw, 5rem)
+        var(--journal-gutter)
+        clamp(4rem, 7vw, 7rem);
+
+    background: var(--journal-background);
+
+}
+
+.writing-landing .journal-archive-inner {
+
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+
+/* Archive heading */
+
+.writing-landing .journal-archive-heading {
+
+    margin-bottom: 2.5rem;
+
+}
+
+.writing-landing .journal-archive-heading h2 {
+
+    margin: 0;
+
+    font-family: var(--journal-heading);
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: 400;
+
+    line-height: 1.25;
+
+}
+
+
+/* =========================================
+   INDIVIDUAL ARCHIVE ENTRIES
+   ========================================= */
+
+.writing-landing .journal-entry {
+
+    margin: 0;
+    padding: 0;
+
+    border-top: 1px solid
+        var(--journal-line);
+
+}
+
+.writing-landing .journal-entry:last-child {
+
+    border-bottom: 1px solid
+        var(--journal-line);
+
+}
+
+
+/* Entire entry is a link */
+
+.writing-landing .journal-entry-link {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(125px, 0.25fr)
+        minmax(0, 1fr)
+        24px;
+
+    align-items: start;
+
+    gap: clamp(1rem, 3vw, 3rem);
+
+    padding: 2.25rem 0;
+
+    color: var(--journal-text);
+
+    text-decoration: none;
+    border: none;
+
+}
+
+
+/* Publication date */
+
+.writing-landing .journal-entry-date {
+
+    padding-top: 0.5rem;
+
+    color: var(--journal-muted);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Article title */
+
+.writing-landing .journal-entry-content h3 {
+
+    margin: 0 0 0.85rem;
+
+    font-family: var(--journal-heading);
+    font-size: clamp(1.45rem, 2.5vw, 2.3rem);
+    font-weight: 400;
+
+    line-height: 1.3;
+
+    transition: color 0.25s ease;
+
+}
+
+
+/* Article description */
+
+.writing-landing .journal-entry-content p {
+
+    max-width: 740px;
+
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    color: #333333;
+
+}
+
+
+/* Navigation arrow */
+
+.writing-landing .journal-entry-arrow {
+
+    padding-top: 0.3rem;
+
+    color: var(--journal-accent);
+
+    font-size: 1.5rem;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+/* =========================================
+   INTERACTION
+   ========================================= */
+
+@media (hover: hover) {
+
+    .writing-landing
+    .journal-entry-link:hover h3 {
+
+        color: var(--journal-accent);
+
+    }
+
+    .writing-landing
+    .journal-entry-link:hover
+    .journal-entry-arrow {
+
+        transform: translateX(4px);
+
+    }
+
+}
+
+
+/* Keyboard accessibility */
+
+.writing-landing main a:focus-visible {
+
+    outline: 2px solid var(--journal-accent);
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   TABLET / IPAD PORTRAIT
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .writing-landing {
+
+        --journal-gutter: 8%;
+
+    }
+
+    .writing-landing .journal-intro {
+
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+    }
+
+    .writing-landing .journal-intro h1 {
+
+        font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+
+    }
+
+    .writing-landing .journal-banner {
+
+        height: clamp(150px, 24vw, 240px);
+
+    }
+
+    .writing-landing .journal-featured-inner {
+
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+    }
+
+    .writing-landing .journal-featured h2 {
+
+        font-size: clamp(2rem, 4.8vw, 3.2rem);
+
+    }
+
+    .writing-landing .journal-entry-link {
+
+        grid-template-columns:
+            125px
+            minmax(0, 1fr)
+            20px;
+
+        gap: 1.25rem;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE / IPHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .writing-landing {
+
+        --journal-gutter: 6%;
+
+    }
+
+
+    /* Introduction */
+
+    .writing-landing .journal-intro {
+
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+    }
+
+    .writing-landing .journal-intro h1 {
+
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
+
+        line-height: 1.2;
+
+    }
+
+    .writing-landing .journal-summary {
+
+        font-size: 1rem;
+        line-height: 1.75;
+
+    }
+
+
+    /* Photograph */
+
+    .writing-landing .journal-banner {
+
+        height: 140px;
+
+    }
+
+
+    /* Featured article */
+
+    .writing-landing .journal-featured {
+
+        padding-top: 2.75rem;
+        padding-bottom: 3rem;
+
+    }
+
+    .writing-landing .journal-featured h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    /* Archive */
+
+    .writing-landing .journal-archive {
+
+        padding-top: 2.75rem;
+        padding-bottom: 3.5rem;
+
+    }
+
+    .writing-landing .journal-entry-link {
+
+        position: relative;
+
+        grid-template-columns: 1fr;
+
+        gap: 0.75rem;
+
+        padding:
+            1.75rem
+            2rem
+            1.75rem
+            0;
+
+    }
+
+    .writing-landing .journal-entry-date {
+
+        padding: 0;
+
+        font-size: 0.72rem;
+
+    }
+
+    .writing-landing .journal-entry-content h3 {
+
+        font-size: 1.65rem;
+
+    }
+
+    .writing-landing .journal-entry-content p {
+
+        font-size: 0.95rem;
+        line-height: 1.75;
+
+    }
+
+    .writing-landing .journal-entry-arrow {
+
+        position: absolute;
+
+        right: 0;
+        top: 2.85rem;
+
+        padding: 0;
+
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .writing-landing main *,
+    .writing-landing main *::before,
+    .writing-landing main *::after {
+
+        transition: none !important;
+        animation: none !important;
+
+    }
+
+    .writing-landing
+    .journal-entry-link:hover
+    .journal-entry-arrow {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* END OF WRITING STYLESHEET */
