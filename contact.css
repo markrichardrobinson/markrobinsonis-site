@@ -1,0 +1,563 @@
+/* =========================================
+   MARKROBINSONIS.COM
+   CONTACT PAGE
+   ========================================= */
+
+
+/* =========================================
+   PAGE VARIABLES
+   ========================================= */
+
+.contact-landing {
+
+    --contact-paper: #f8f8f5;
+    --contact-white: #ffffff;
+    --contact-text: #111111;
+    --contact-muted: #666666;
+    --contact-accent: #306988;
+    --contact-line: #d8d8d3;
+
+    --contact-gutter: clamp(1.5rem, 8vw, 8rem);
+
+    --contact-heading:
+        'Cinzel', Georgia, serif;
+
+}
+
+
+/* =========================================
+   CONTACT HERO
+   ========================================= */
+
+.contact-landing .contact-hero {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-height: clamp(460px, 40vw, 650px);
+
+    background: var(--contact-paper);
+
+}
+
+
+/* =========================================
+   HERO TEXT
+   ========================================= */
+
+.contact-landing .contact-hero-copy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding:
+        clamp(3rem, 6vw, 6rem)
+        var(--contact-gutter);
+
+}
+
+
+/* Section label */
+
+.contact-landing .contact-label {
+
+    margin: 0 0 1.5rem;
+
+    color: var(--contact-accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 0.8rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Main heading */
+
+.contact-landing .contact-hero h1 {
+
+    margin: 0 0 2rem;
+
+    color: var(--contact-text);
+
+    font-family: var(--contact-heading);
+
+    font-size: clamp(2.6rem, 4.5vw, 5rem);
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+
+}
+
+
+/* Opening paragraph */
+
+.contact-landing .contact-lead {
+
+    max-width: 600px;
+
+    margin: 0 0 1.5rem;
+
+    color: var(--contact-text);
+
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+
+    line-height: 1.8;
+
+}
+
+
+/* Secondary paragraph */
+
+.contact-landing .contact-introduction {
+
+    max-width: 600px;
+
+    margin: 0 0 2rem;
+
+    color: var(--contact-text);
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+}
+
+
+/* =========================================
+   EMAIL LINK
+   ========================================= */
+
+.contact-landing .contact-email-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 0.75rem 0;
+
+    min-height: 44px;
+
+    color: var(--contact-text);
+
+    background: transparent;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    text-decoration: none;
+
+    border: none;
+
+    border-bottom: 1px solid
+        var(--contact-accent);
+
+    transition: color 0.25s ease;
+
+}
+
+
+.contact-landing .contact-email-link span {
+
+    color: var(--contact-accent);
+
+    font-size: 1.4rem;
+
+    line-height: 1;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+/* =========================================
+   CONTACT PHOTOGRAPH
+   ========================================= */
+
+.contact-landing .contact-hero-image {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 0;
+
+    overflow: hidden;
+
+    background: #45443f;
+
+}
+
+
+.contact-landing .contact-hero-image img {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+}
+
+
+/* =========================================
+   AREAS OF ENQUIRY
+   ========================================= */
+
+.contact-landing .contact-enquiries {
+
+    background: var(--contact-white);
+
+    padding:
+        clamp(3rem, 5vw, 5rem)
+        var(--contact-gutter);
+
+}
+
+
+.contact-landing .contact-enquiries-inner {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: clamp(2rem, 7vw, 7rem);
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+}
+
+
+.contact-landing .contact-enquiry {
+
+    padding-top: 1.75rem;
+
+    border-top: 1px solid
+        var(--contact-line);
+
+}
+
+
+/* Enquiry headings */
+
+.contact-landing .contact-enquiry h2 {
+
+    margin: 0 0 1rem;
+
+    color: var(--contact-text);
+
+    font-family: var(--contact-heading);
+
+    font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+}
+
+
+/* Enquiry descriptions */
+
+.contact-landing .contact-enquiry p {
+
+    max-width: 540px;
+
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+}
+
+
+/* Literary link */
+
+.contact-landing .contact-enquiry a {
+
+    color: inherit;
+
+    text-decoration: underline;
+
+    text-decoration-color:
+        var(--contact-accent);
+
+    text-underline-offset: 4px;
+
+}
+
+
+/* =========================================
+   HOVER EFFECTS
+   ========================================= */
+
+@media (hover: hover) {
+
+
+    .contact-landing .contact-email-link:hover {
+
+        color: var(--contact-accent);
+
+    }
+
+
+    .contact-landing
+    .contact-email-link:hover span {
+
+        transform: translate(3px, -3px);
+
+    }
+
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+.contact-landing main a:focus-visible {
+
+    outline: 2px solid
+        var(--contact-accent);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   IPAD PORTRAIT
+   ========================================= */
+
+@media (max-width: 900px) {
+
+
+    .contact-landing {
+
+        --contact-gutter: 8%;
+
+    }
+
+
+    .contact-landing .contact-hero {
+
+        grid-template-columns: 1fr;
+
+        min-height: 0;
+
+    }
+
+
+    .contact-landing .contact-hero-copy {
+
+        padding:
+            3.5rem
+            var(--contact-gutter);
+
+    }
+
+
+    .contact-landing .contact-hero h1 {
+
+        font-size:
+            clamp(2.8rem, 6vw, 4.5rem);
+
+    }
+
+
+    .contact-landing .contact-hero-image {
+
+        aspect-ratio: 16 / 10;
+
+        max-height: 520px;
+
+    }
+
+
+    .contact-landing .contact-hero-image img {
+
+        object-position: center 65%;
+
+    }
+
+
+    .contact-landing .contact-enquiries-inner {
+
+        gap: 2.5rem;
+
+    }
+
+
+}
+
+
+/* =========================================
+   MOBILE / IPHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+
+    .contact-landing {
+
+        --contact-gutter: 6%;
+
+    }
+
+
+    .contact-landing .contact-hero-copy {
+
+        padding:
+            2.75rem
+            var(--contact-gutter)
+            3rem;
+
+    }
+
+
+    .contact-landing .contact-hero h1 {
+
+        font-size:
+            clamp(2.5rem, 10vw, 3.5rem);
+
+        margin-bottom: 1.5rem;
+
+    }
+
+
+    .contact-landing .contact-lead {
+
+        font-size: 1.1rem;
+
+        line-height: 1.75;
+
+    }
+
+
+    .contact-landing .contact-introduction {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    .contact-landing .contact-hero-image {
+
+        aspect-ratio: 4 / 3;
+
+        max-height: 380px;
+
+    }
+
+
+    .contact-landing .contact-hero-image img {
+
+        object-position: center 60%;
+
+    }
+
+
+    .contact-landing .contact-enquiries {
+
+        padding:
+            2.75rem
+            var(--contact-gutter)
+            3rem;
+
+    }
+
+
+    .contact-landing .contact-enquiries-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+
+    .contact-landing .contact-enquiry h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+    .contact-landing .contact-email-link,
+
+    .contact-landing .contact-email-link span {
+
+        transition: none;
+
+    }
+
+
+    .contact-landing
+    .contact-email-link:hover span {
+
+        transform: none;
+
+    }
+
+
+}
+
+
+/* END OF CONTACT PAGE STYLESHEET */
