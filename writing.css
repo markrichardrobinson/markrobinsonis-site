@@ -112,21 +112,15 @@
 
 
 /* =========================================
-   PANORAMIC PHOTOGRAPH
+   WRITING LANDING PAGE BANNER
    ========================================= */
 
 .writing-landing .journal-banner {
 
-    position: relative;
-
     display: block;
-
     width: 100%;
-    height: clamp(140px, 19vw, 320px);
-
     overflow: hidden;
-
-    background: #45423e;
+    background: #252525;
 
 }
 
@@ -135,10 +129,37 @@
     display: block;
 
     width: 100%;
-    height: 100%;
+    height: clamp(200px, 25vw, 380px);
 
     object-fit: cover;
-    object-position: center;
+    object-position: center 55%;
+
+}
+
+
+/* IPAD PORTRAIT */
+
+@media (max-width: 900px) {
+
+    .writing-landing .journal-banner img {
+
+        height: clamp(200px, 30vw, 300px);
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .writing-landing .journal-banner img {
+
+        height: 210px;
+        object-position: 58% center;
+
+    }
 
 }
 
