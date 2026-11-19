@@ -1,0 +1,780 @@
+/* =========================================
+   MARKROBINSONIS.COM
+   ABOUT PAGE
+   ========================================= */
+
+
+/* =========================================
+   PAGE VARIABLES
+   ========================================= */
+
+.about-landing {
+
+    --about-paper: #f8f8f5;
+    --about-white: #ffffff;
+    --about-text: #111111;
+    --about-muted: #666666;
+    --about-accent: #306988;
+    --about-line: #d8d8d3;
+
+    --about-gutter: clamp(1.5rem, 8vw, 8rem);
+
+    --about-heading:
+        'Cinzel', Georgia, serif;
+
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.about-landing .about-hero {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    width: 100%;
+
+    min-height: clamp(480px, 44vw, 720px);
+
+    background: var(--about-paper);
+
+}
+
+
+/* =========================================
+   HERO PORTRAIT
+   ========================================= */
+
+.about-landing .about-hero-image {
+
+    position: relative;
+
+    min-width: 0;
+    min-height: 0;
+
+    overflow: hidden;
+
+    background: #252525;
+
+}
+
+
+.about-landing .about-hero-image img {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 60% center;
+
+}
+
+
+/* =========================================
+   HERO TEXT
+   ========================================= */
+
+.about-landing .about-hero-copy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    min-width: 0;
+
+    padding:
+        clamp(2.5rem, 5vw, 6rem)
+        clamp(2rem, 5vw, 6rem);
+
+}
+
+
+.about-landing .about-label {
+
+    margin: 0 0 1.5rem;
+
+    color: var(--about-accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 0.8rem;
+    font-weight: 400;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+}
+
+
+.about-landing .about-hero h1 {
+
+    margin: 0 0 1.5rem;
+
+    color: var(--about-text);
+
+    font-family: var(--about-heading);
+
+    font-size: clamp(2.5rem, 4.5vw, 5rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.025em;
+
+    line-height: 1.12;
+
+}
+
+
+.about-landing .about-identity {
+
+    margin: 0 0 2rem;
+
+    color: var(--about-accent);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    line-height: 1.8;
+
+}
+
+
+.about-landing .about-hero-copy p {
+
+    max-width: 620px;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+
+}
+
+
+.about-landing .about-hero-copy .about-label {
+
+    font-size: 0.8rem;
+
+}
+
+
+.about-landing .about-hero-copy .about-identity {
+
+    font-size: 0.78rem;
+
+}
+
+
+.about-landing .about-hero-copy .about-lead {
+
+    margin: 0 0 1.5rem;
+
+    font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+
+    font-weight: 400;
+
+    line-height: 1.6;
+
+}
+
+
+.about-landing .about-hero-copy p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================
+   BIOGRAPHY
+   ========================================= */
+
+.about-landing .about-biography {
+
+    padding:
+        clamp(3.5rem, 7vw, 7rem)
+        var(--about-gutter);
+
+    background: var(--about-white);
+
+}
+
+
+.about-landing .about-biography-inner,
+
+.about-landing .about-theology-inner {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.7fr)
+        minmax(0, 1.3fr);
+
+    gap: clamp(2rem, 7vw, 8rem);
+
+    align-items: start;
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+   ========================================= */
+
+.about-landing .about-section-heading h2 {
+
+    margin: 0;
+
+    color: var(--about-text);
+
+    font-family: var(--about-heading);
+
+    font-size: clamp(2rem, 3.5vw, 3.6rem);
+
+    font-weight: 400;
+
+    letter-spacing: -0.02em;
+
+    line-height: 1.2;
+
+}
+
+
+/* =========================================
+   BIOGRAPHICAL PROSE
+   ========================================= */
+
+.about-landing .about-prose {
+
+    min-width: 0;
+
+    max-width: 760px;
+
+}
+
+
+.about-landing .about-prose p {
+
+    margin: 0 0 1.6rem;
+
+    color: var(--about-text);
+
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+
+    line-height: 1.9;
+
+}
+
+
+.about-landing .about-prose p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.about-landing .about-prose a {
+
+    color: inherit;
+
+    text-decoration: underline;
+
+    text-decoration-color: var(--about-accent);
+
+    text-underline-offset: 4px;
+
+}
+
+
+/* =========================================
+   WRITING AND THEOLOGY
+   ========================================= */
+
+.about-landing .about-theology {
+
+    padding:
+        clamp(3.5rem, 7vw, 7rem)
+        var(--about-gutter);
+
+    background: var(--about-paper);
+
+}
+
+
+.about-landing .about-prose .about-text-link {
+
+    display: inline-block;
+
+    margin-top: 0.75rem;
+
+    padding-bottom: 0.3rem;
+
+    color: var(--about-accent);
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid
+        var(--about-accent);
+
+}
+
+
+/* =========================================
+   LARGE QUOTATION
+   ========================================= */
+
+.about-landing .about-quotation {
+
+    background: #171717;
+
+    color: #f8f8f5;
+
+    padding:
+        clamp(4rem, 9vw, 9rem)
+        var(--about-gutter);
+
+}
+
+
+.about-landing .about-quotation-inner {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.about-landing .about-quotation blockquote {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+}
+
+
+.about-landing .about-quotation blockquote p {
+
+    margin: 0;
+
+    color: #f8f8f5;
+
+    font-family: var(--about-heading);
+
+    font-size: clamp(2rem, 4.2vw, 4.5rem);
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    letter-spacing: -0.02em;
+
+    line-height: 1.35;
+
+}
+
+
+.about-landing .about-quotation-credit {
+
+    margin: 2rem 0 0;
+
+    color: #d0d0d0;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================
+   EXPLORE THE WEBSITE
+   ========================================= */
+
+.about-landing .about-explore {
+
+    background: var(--about-white);
+
+    padding:
+        clamp(3rem, 6vw, 6rem)
+        var(--about-gutter);
+
+}
+
+
+.about-landing .about-explore-inner {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: clamp(1.5rem, 4vw, 4rem);
+
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+}
+
+
+.about-landing .about-explore-link {
+
+    display: block;
+
+    padding: 1.5rem 0;
+
+    border: none;
+
+    border-top: 1px solid var(--about-line);
+
+    color: var(--about-text);
+
+    text-decoration: none;
+
+}
+
+
+.about-landing .about-explore-link h2 {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin: 0 0 0.8rem;
+
+    font-family: var(--about-heading);
+
+    font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+
+    font-weight: 400;
+
+    line-height: 1.3;
+
+}
+
+
+.about-landing .about-explore-link span {
+
+    color: var(--about-accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 1.5rem;
+
+    transition: transform 0.25s ease;
+
+}
+
+
+.about-landing .about-explore-link p {
+
+    margin: 0;
+
+    color: #444444;
+
+    font-size: 0.95rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================
+   HOVER EFFECTS
+   ========================================= */
+
+@media (hover: hover) {
+
+
+    .about-landing .about-explore-link:hover h2 {
+
+        color: var(--about-accent);
+
+    }
+
+
+    .about-landing .about-explore-link:hover span {
+
+        transform: translateX(4px);
+
+    }
+
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+.about-landing main a:focus-visible {
+
+    outline: 2px solid var(--about-accent);
+
+    outline-offset: 5px;
+
+}
+
+
+/* =========================================
+   IPAD PORTRAIT
+   ========================================= */
+
+@media (max-width: 900px) {
+
+
+    .about-landing {
+
+        --about-gutter: 8%;
+
+    }
+
+
+    .about-landing .about-hero {
+
+        grid-template-columns: 1fr;
+
+        min-height: 0;
+
+    }
+
+
+    .about-landing .about-hero-image {
+
+        aspect-ratio: 4 / 3;
+
+        max-height: 560px;
+
+    }
+
+
+    .about-landing .about-hero-image img {
+
+        object-position: center 35%;
+
+    }
+
+
+    .about-landing .about-hero-copy {
+
+        padding: 3.5rem var(--about-gutter);
+
+    }
+
+
+    .about-landing .about-hero h1 {
+
+        font-size: clamp(2.6rem, 6vw, 4.5rem);
+
+    }
+
+
+    .about-landing .about-biography-inner,
+
+    .about-landing .about-theology-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+
+    .about-landing .about-section-heading h2 {
+
+        font-size: 2.7rem;
+
+    }
+
+
+    .about-landing .about-explore-inner {
+
+        gap: 1.5rem;
+
+    }
+
+
+}
+
+
+/* =========================================
+   MOBILE / IPHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+
+    .about-landing {
+
+        --about-gutter: 6%;
+
+    }
+
+
+    .about-landing .about-hero-image {
+
+        aspect-ratio: 5 / 4;
+
+        max-height: 400px;
+
+    }
+
+
+    .about-landing .about-hero-image img {
+
+        object-position: 60% center;
+
+    }
+
+
+    .about-landing .about-hero-copy {
+
+        padding: 2.75rem var(--about-gutter);
+
+    }
+
+
+    .about-landing .about-hero h1 {
+
+        font-size: clamp(2.4rem, 9vw, 3.5rem);
+
+        line-height: 1.15;
+
+    }
+
+
+    .about-landing .about-identity {
+
+        font-size: 0.72rem;
+
+        line-height: 1.9;
+
+    }
+
+
+    .about-landing .about-biography,
+
+    .about-landing .about-theology {
+
+        padding-top: 3rem;
+
+        padding-bottom: 3rem;
+
+    }
+
+
+    .about-landing .about-section-heading h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+
+    .about-landing .about-prose p {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    .about-landing .about-quotation {
+
+        padding: 4rem var(--about-gutter);
+
+    }
+
+
+    .about-landing .about-quotation blockquote p {
+
+        font-size: clamp(1.9rem, 7vw, 2.8rem);
+
+    }
+
+
+    .about-landing .about-explore-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .about-landing .about-explore-link {
+
+        padding: 1.5rem 0;
+
+    }
+
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+    .about-landing .about-explore-link span {
+
+        transition: none;
+
+    }
+
+
+    .about-landing .about-explore-link:hover span {
+
+        transform: none;
+
+    }
+
+
+}
+
+
+/* END OF ABOUT PAGE STYLESHEET */
